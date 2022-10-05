@@ -5,7 +5,6 @@
   "secretBase": "Super tower",
   "active": true,
 
-
   "members": [
     {
       "name": "Molecule Man",
@@ -27,13 +26,33 @@
       "name": "Eternal Flame",
       "age": 1000000,
       "secretIdentity": "Unknown",
+      "powers": ["Immortality", "Heat Immunity", "Inferno", "lastArray"]
+    }
+  ],
+
+  "users": [
+    {
+      "name": "abdelhaq",
+      "age": 24,
+      "secretIdentity": "ada lovelace",
       "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
+        "react",
+        "vue", 
+        "angular",
+        {
+          "name":"god father",
+          "value": "family",
+          "anne": 1889
+        }
       ]
+    }
+  ],
+  "lmodir": [
+    {
+      "name": "lmodir",
+      "age": 24,
+      "secretIdentity": "ada lovelace",
+      "powers": ["react", "vue", "angular"]
     }
   ]
 }

@@ -1,8 +1,6 @@
 
 // get data in file json
 let main_object;
-// content of main array
-let ele_arr;
 
 
 // tget file json
@@ -23,16 +21,19 @@ function read_first_Object () {
     const value_Object = Object.values(main_object);
     let main_ele;
     let main_arr;
+    let ele_arr;
 
     for (var i = 0; i < value_Object.length ;i++){
         if (typeof (value_Object[i]) != "object"){
-            main_ele = keys_Object[i] + " : " + value_Object[i] + "<br> "
-            // console.log("oooo",main_ele);
-            document.getElementById('first_ele').innerHTML +=  main_ele;
+            if(typeof (value_Object[i]) != "array") {
+                main_ele = keys_Object[i] + " : " + value_Object[i] + "<br> "
+                document.getElementById('first_ele').innerHTML += main_ele;
+            }
         }
         else{
             ele_arr = value_Object[i];
-            main_arr = keys_Object[i];
+            main_arr = keys_Object[i] + "<br>";
+            read_ele_arr(ele_arr);
             document.getElementById('first_arr').innerHTML += main_arr;
         }
     }
@@ -40,14 +41,14 @@ function read_first_Object () {
 }
 
 
-function read_ele_arr () {
-    const value_array = Object.values(ele_arr)
+function read_ele_arr (val_arr) {
+    const value_array = Object.values(val_arr)
     let content_arr;
 
     for (var i = 0; i < value_array.length; i++) {
-        if (typeof (value_array[i]) === "object") {
-            content_arr = value_array[i]
-            read_p_arr(content_arr)
+        if (typeof (value_array[i]) != "array") {
+                content_arr = value_array[i]
+                read_p_arr(content_arr)
         }
     }
 }
@@ -58,31 +59,47 @@ function read_p_arr (arr) {
     const value = Object.values(arr)
     const keys = Object.keys(arr)
     let res;
-    let lba9i;
-
-    // console.log('val', value);
-    // console.log('key', keys);
-
+    let module;
+    
     for (i= 0; i < value.length; i++) {
         if (typeof (value[i]) != "object") {
-            res = keys[i] + " : " + value[i] + "<br>" 
-            document.getElementById('content_arr').innerHTML += res;
+            if (typeof (value[i]) != "array") {
+                res = keys[i] + " : " + value[i] + "<br>"
+                document.getElementById('content_arr').innerHTML += res;
+            }
         }
         else {
             last(value[i]);
-            lba9i = keys[i] + "<br>"
-            document.getElementById('another_arr').innerHTML += lba9i;
+            module = keys[i] + "<br>"
+            document.getElementById('another_arr').innerHTML += module;
         }     
     }
 }
 
 function last (last) {
     const values = Object.values(last)
+    const keys = Object.keys(last)
     let i;
     let res;
     
     for (i = 0; i < values.length; i++) {
-        res = values[i] + "<br>"
-        document.getElementById('last').innerHTML += res;
+        if (typeof (values[i]) != "object") {
+            if (typeof (values[i]) != "array") {
+                res = values[i] + "<br>" 
+                document.getElementById('last_o').innerHTML += res;
+            }
+
+            if (typeof (values[i]) )
+        } 
+        else {
+                console.log(keys[i]);
+                console.log(values[i]);
+                res = values[i] + "<br>"
+            document.getElementById('last').innerHTML += res;
+        }
     }
+}
+
+function finaly () {
+
 }

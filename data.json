@@ -5,6 +5,13 @@
   "secretBase": "Super tower",
   "active": true,
 
+
+  "oject": {
+    "name": " Man",
+    "age": 11,
+    "secretIdentity": "Dan"
+  },
+
   "members": [
     {
       "name": "Molecule Man",
@@ -35,16 +42,7 @@
       "name": "abdelhaq",
       "age": 24,
       "secretIdentity": "ada lovelace",
-      "powers": [
-        "react",
-        "vue", 
-        "angular",
-        {
-          "name":"god father",
-          "value": "family",
-          "anne": 1889
-        }
-      ]
+      "powers": ["react", "vue", "angular"]
     }
   ],
   "lmodir": [
@@ -52,7 +50,8 @@
       "name": "lmodir",
       "age": 24,
       "secretIdentity": "ada lovelace",
-      "powers": ["react", "vue", "angular"]
+      "powers": ["react", "vue", "angular"],
+      "yyy": ["zzz", "rrrr", "dddd"]
     }
   ]
 }

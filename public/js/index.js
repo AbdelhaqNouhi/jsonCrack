@@ -4,7 +4,7 @@ let main_object;
 // tget file json
 function goToBox() {
 
-    fetch('../data.json')
+    fetch('../data/data.json')
         .then(res => res.json())
         .then(data => {
             main_object = data

@@ -1,0 +1,19 @@
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+textarea {
+    background-color: rgb(255, 140, 0);
+    width: 50vh;
+    height: 100vh;
+}
+
+.json_res {
+    display: flex;
+    background-color: aqua;
+    width: 100%;
+}
